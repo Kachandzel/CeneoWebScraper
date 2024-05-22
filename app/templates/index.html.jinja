@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Strona główna - Ceneo Web Scraper{% endblock %}
+
+{% block content %}
+<h2>Witaj w Ceneo Web Scraper</h2>
+<p>Użyj tego narzędzia, aby wyszukać dane z Ceneo i uzyskać najlepsze oferty na produkty!</p>
+<form action="/scrape" method="post">
+    <label for="product">Wprowadź nazwę produktu:</label>
+    <input type="text" id="product" name="product" required>
+    <button type="submit">Szukaj</button>
+</form>
+{% endblock %}
