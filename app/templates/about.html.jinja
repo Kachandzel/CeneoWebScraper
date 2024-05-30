@@ -1,0 +1,57 @@
+{% extends "base.html.jinja" %}
+{%block title%}
+      
+{%endblock title%}
+{% block content%}
+  <section style="text-align: center; font-size: 20px; margin-top: 50px;">
+            <div id="profile">
+              <img class="profile" src="{{ url_for('static', filename='karola.png') }}" >
+              <h1 style="text-align: center; font-family: Staatliches; font-size: 40px;" id="kc">Kacper Handzel</h1>
+              <p>Student pierwszego roku Informatyki Ekonomicznej w Akademii Nauk Stosowanych w Nowym Targu. Technik Informatyk.</p>
+              
+              <p>Moje kwalifikacje:</p>
+              <ul class="qua">
+              <li>INF.02 • Administracja i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych</li>
+              <li>INF.03 • Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych</li>
+              </ul>
+              <p>
+              Znajomość w strefie IT:
+              <table>
+        <thead>
+            <tr>
+                <th>FRONTEND</th>
+                <th>BACKEND</th>
+                <th>SQL</th>
+                <th>GRAFIKA</th>
+                <th>SYSTEMY OPERACYJNE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>PHP</td>
+                <td>MySQL</td>
+                <td>GIMP</td>
+                <td>Windows</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>C++</td>
+                <td></td>
+                <td>Photoshop</td>
+                <td>Ubuntu</td>
+            </tr>
+            <tr>
+                <td>JS</td>
+                <td>Python</td>
+                <td></td>
+                <td>Inkscape</td>
+                <td></td>
+                
+            </tr>
+        </tbody>
+    </table>
+          </section>
+        </main>
+
+{%endblock content %}

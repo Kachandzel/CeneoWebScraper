@@ -1,0 +1,22 @@
+{% extends "base.html.jinja" %}
+{%block title%}
+        {%endblock title%}
+{% block content%}
+{% if error is defined %}
+    <div class="error-box">
+    <span class="error">⚠️</span> <span class="error-message">Nie ma takiego produktu o podanym ID!</span>
+    </div>
+{%endif%}
+<section style="text-align: center; font-size: 20px; margin-top: 50px;">
+            <div id="profile">
+              <img class="profile" src="{{ url_for('static', filename='star.png') }}" >
+              <h2>Ekstrakcja opinii</h2>
+              <div class="container">
+        <form id="extract-form" method="POST">
+            <label for="product_id">ID Produktu:</label>
+            <input type="text" id="product_id" name="product_id" required>
+            <button type="submit">Uruchom ekstrakcję</button>
+        </form>
+    </div>
+</section>
+{%endblock content %}

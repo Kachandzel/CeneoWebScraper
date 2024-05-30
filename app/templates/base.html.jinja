@@ -3,23 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Ceneo Web Scraper{% endblock %}</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>CWS | Strona główna</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
     <header>
         <h1>Ceneo Web Scraper</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+       <nav>
+                <ul>
+                    <li>
+                            <a href="{{ url_for('extract') }}">EKSTRAKCJA OPINII</a>
+                    </li>
+                    <li>
+                        
+                            <a href="{{ url_for('list') }}">LISTA PRODUKTÓW</a>
+                        
+                    </li>
+                    <li>
+                        
+                            <a href="{{ url_for('home') }}">STRONA GŁÓWNA</a>
+                        
+                    </li>
+                    <li>
+                        
+                            <a href="{{ url_for('about') }}">O AUTORZE</a>
+                        
+                    </li>
+                </ul>
+        </nav>
+        <div>
+        {%block title%}
+          <section style="text-align: center; font-size: 20px; margin-top: 50px;">
+            <div id="profile">
+              <img class="profile" src="{{ url_for('static', filename='question.png') }}" >
+              <h1 style="text-align: center; font-family: Staatliches; font-size: 40px;">Co to jest Ceneo Web Scraper?</h1>
+              <p>Ceneo Web Scraper to porównywarka cen danych produktów. Działająca na podobnej zasadzie co <a class="link" href="https://ceneo.pl">CENEO.PL</a>. Chcesz wiedzieć gdzie jest tanio? Albo... Chcesz znać opinie o danym produkcie? To tutaj!</p>
+              <h1 style="text-align: center; font-family: Staatliches; font-size: 40px;">Z jakich bibilotek korzystam?</h1>
+               <p>Blinker, Click, Flask, Itsdangerous, Jinja2, MarkupSafe, Werkzeug</p>
+               <h1 style="text-align: center; font-family: Staatliches; font-size: 40px;">Jakie podejścia?</h1>
+               <p>Strukturalne oraz Obiektowe</p>
+              </section>
+        {%endblock title%}
+{% block content%}
+    <p></p>
+    {%endblock content %}
+       </div>
+        </main>
     <footer>
-        <p> 2024 Ceneo Web Scraper. All rights reserved.</p>
+        <h3>Kacper Handzel © Akademia Nauk Stosowanych w Nowym Targu</h3>
     </footer>
 </body>
 </html>

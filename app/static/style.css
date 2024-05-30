@@ -1,77 +1,249 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0%;
+    padding: 0%;
+    background-color: #1d1d1d;
+    
+ 
 }
-
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
     text-align: center;
-}
+    background-color: #FF8000;
+    margin-top: 0%;
+    padding: 10px;
+    font-family: Staatliches;
+    color: #fff;
+    box-shadow: 1px 1px #FF8000 ;
+    letter-spacing: 5px;}
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: Roboto;
+    padding: 10px;
+    background-color: #f3993f;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1em;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    font-weight: bold;
+    color: #fff;
 }
 
-main {
-    padding: 2em;
+nav ul li a:hover {
+    color: #a35405;
+}
+#profile
+{
+  width: 100%;
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(24, 24, 24, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left; 
+  margin: 0 auto; 
+  box-shadow: 0px 1px 10px  #d55e0e;
+
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: absolute;
-    bottom: 0;
+#profile h1 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#profile p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+#contact div {
+    flex: 1;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+img.profile {
+    border-radius: 50%; 
+    width: 200px; 
+    height: 200px;
+    display: block;
+    margin: 0 auto; 
+    box-shadow: 0px 1px 10px  #d55e0e;
+}
+
+ul.qua {
+    font-family: roboto;
+    color: #fff;
+    font-size: 16px;
+}
+p.qua {
+   font-weight: bold;
+   color: #655f5f;
+   margin: 10;
+   padding: 0;
+}
+/* Stylowanie całej tabeli */
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: roboto;
+    font-size: 15px;
+}
+
+/* Stylowanie nagłówków tabeli */
+th {
+    background-color: #FF8000;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #FF8000
+}
+
+/* Stylowanie komórek tabeli */
+td {
+    border: 1px solid #737373;
+    padding: 5px;
+    color: #fff;
+}
+
+/* Dodanie cienia do komórek */
+td {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p.contact {
+    font-weight: bold;
+    
+}
+.link {
+    text-decoration: none;
+    color: #FF8000;
+    margin: 0;
+    list-style-type: none;
+    font-family: roboto;
+    font-size: 15px;
+}
+a:hover {
+    color: #d55e0e;
+    border-bottom: #642b05 3px solid;
+}
+
+footer{
+    text-align: center;
+    background-color: #FF8000;
+    margin-top: 100px;
+    padding: 5px;
+    font-family: Roboto;
+    color: #fff;
+    font-size: 15px;
+    box-shadow: 1px 1px #FF8000;
+    margin-bottom: 0;
+}
+h2 {
+    text-align: center;
+    color: #fff;
+    font-family: Staatliches;
+    font-size: 40px;
+    word-spacing: 5px;
+}
+
+.container {
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #FF8000;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 50px;
+
 }
 
 form {
-    background-color: white;
-    padding: 2em;
-    margin: 2em 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-form input[type="text"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-form button {
-    background-color: #4CAF50;
-    color: white;
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    align-self: flex-start;
+    color: #fff;
+    font-family: Roboto;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid#FF8000;
+    border-radius: 5px;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #FF8000;
+    color: #fff;
     border: none;
-    padding: 0.75em 1.5em;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
+    width: 60%;
+    font-family: Staatliches;
 }
 
-form button:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #cc6600;
+}
+
+p.div {
+    color: #fff;
+    font-size: 20px;
+    padding: 50px;
+    font-family: roboto;
+    text-align: center;
+}
+.error-box
+{ 
+    border: #D10000 solid 2px; 
+    padding: 25px; 
+    margin: 20px; 
+    width: 300px; 
+    box-shadow: 0 0 10px #000;
+ 
+}
+
+.error  {
+    border-right: #D10000 solid 2px; 
+    margin-right: 5px;
+    margin-left: 0px;
+   padding-right: 5px;
+    font-size: 20px;
+}
+.error-message {
+    font-family: Staatliches; 
+    color: #fff;
+    font-size: 18px;
 }
